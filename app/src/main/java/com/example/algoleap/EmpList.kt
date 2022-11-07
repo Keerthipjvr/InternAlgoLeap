@@ -44,7 +44,7 @@ class EmpList : AppCompatActivity() {
             intent.putExtra("emp", it)
             startActivity(intent)
         }
-        
+
 
 
         recyclerView = findViewById(R.id.recyclerView)
@@ -52,8 +52,9 @@ class EmpList : AppCompatActivity() {
 
 
 
-
     }
+
+
 
 
 
@@ -73,6 +74,7 @@ class EmpList : AppCompatActivity() {
                 layoutManager = LinearLayoutManager(this@EmpList)
                 adapter = mAdapter
                 setAdapter(empList)
+
 
                     mAdapter?.setOnActionUpdateListener {
                         val intent = Intent(this@EmpList, AddDetails::class.java)
@@ -97,6 +99,7 @@ class EmpList : AppCompatActivity() {
                         }
                         val dialog = builder.create()
                         dialog.show()
+
                     }
                 }
             }
