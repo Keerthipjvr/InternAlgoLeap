@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    app:cardCornerRadius="20dp"
+    android:layout_marginBottom="4dp"
+    app:cardElevation="4dp"
+    android:orientation="vertical"
+    tools:context=".EmpList">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/teal_700"
+        android:elevation="4dp"
+        app:title="Employee List"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:gravity="right" >
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd = "true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_add" />
+
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical ="true"
+                android:layout_marginEnd = "8dp"
+                android:layout_toStartOf="@id/add"
+                android:src="@drawable/ic_logout"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        tools:itemCount="50"
+        tools:listitem="@layout/item_layout" />
+
+</RelativeLayout>

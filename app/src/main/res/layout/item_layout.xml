@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+android:id="@+id/cv_cardView"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:clickable="true"
+android:focusable="true"
+android:orientation="vertical"
+android:padding="8dp"
+android:background="#03A9F4"
+android:layout_marginTop="4dp"
+android:layout_marginBottom="4dp"    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:text="Employee Name"/>
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#CBCBCB"
+        android:textSize="16sp"
+        tools:text="Employee Id"/>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#CBCBCB"
+        android:textSize="16sp"
+        tools:text="Employee Email Id"/>
+
+</LinearLayout>
+
+    <ImageView
+        android:id="@+id/action_delete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd = "true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_delete" />
+
+    
+    <ImageView
+        android:id="@+id/action_update"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical = "true"
+        android:layout_marginEnd = "8dp"
+        android:layout_toStartOf="@id/action_delete"
+        android:src="@drawable/ic_update"/>
+</RelativeLayout>
